@@ -1,0 +1,96 @@
+object fMain: TfMain
+  Left = 279
+  Height = 240
+  Top = 135
+  Width = 320
+  BorderIcons = []
+  BorderStyle = bsNone
+  Caption = 'fMain'
+  Color = clBlack
+  Font.Name = 'Lucida Console'
+  Menu = mMain
+  OnCreate = FormCreate
+  PopupMenu = pmMain
+  Position = poScreenCenter
+  SnapOptions.SnapToMonitor = True
+  LCLVersion = '3.0.0.3'
+  WindowState = wsFullScreen
+  object mMain: TMainMenu
+    Left = 72
+    Top = 27
+    object MenuItem1: TMenuItem
+      Caption = '&File'
+      Visible = False
+      object MenuItem2: TMenuItem
+        Caption = '&Quit'
+        ShortCut = 27
+        OnClick = MenuItem2Click
+      end
+    end
+  end
+  object Timer1: TTimer
+    OnTimer = Timer1Timer
+    Left = 130
+    Top = 82
+  end
+  object pmMain: TPopupMenu
+    Left = 160
+    Top = 160
+    object miFont: TMenuItem
+      Caption = 'Change &Font...'
+      OnClick = miFontClick
+    end
+    object miBackgroundColor: TMenuItem
+      Caption = 'Change &Background Color...'
+      OnClick = miBackgroundColorClick
+    end
+    object Separator1: TMenuItem
+      Caption = '-'
+    end
+    object miQuit: TMenuItem
+      Caption = '&Quit'
+      ShortCut = 27
+      OnClick = miQuitClick
+    end
+  end
+  object FontDialog1: TFontDialog
+    Font.CharSet = ANSI_CHARSET
+    Font.Color = clGray
+    Font.Height = -13
+    Font.Name = 'Verdana'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    MinFontSize = 0
+    MaxFontSize = 0
+    Left = 245
+    Top = 31
+  end
+  object ColorDialog1: TColorDialog
+    Color = clBlack
+    CustomColors.Strings = (
+      'ColorA=000000'
+      'ColorB=000080'
+      'ColorC=008000'
+      'ColorD=008080'
+      'ColorE=800000'
+      'ColorF=800080'
+      'ColorG=808000'
+      'ColorH=808080'
+      'ColorI=C0C0C0'
+      'ColorJ=0000FF'
+      'ColorK=00FF00'
+      'ColorL=00FFFF'
+      'ColorM=FF0000'
+      'ColorN=FF00FF'
+      'ColorO=FFFF00'
+      'ColorP=FFFFFF'
+      'ColorQ=C0DCC0'
+      'ColorR=F0CAA6'
+      'ColorS=F0FBFF'
+      'ColorT=A4A0A0'
+    )
+    Left = 245
+    Top = 72
+  end
+end
