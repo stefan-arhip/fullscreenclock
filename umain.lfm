@@ -57,8 +57,8 @@ object fMain: TfMain
     Font.CharSet = ANSI_CHARSET
     Font.Color = clGray
     Font.Height = -13
-    Font.Name = 'Verdana'
-    Font.Pitch = fpVariable
+    Font.Name = 'Lucida Console'
+    Font.Pitch = fpFixed
     Font.Quality = fqDraft
     Font.Style = [fsBold]
     MinFontSize = 0
